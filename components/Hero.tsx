@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { personalInfo, experience } from "@/data/resume";
 
 export default function Hero() {
@@ -35,29 +36,44 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="bg-panel border hairline rounded-lg p-7 space-y-6">
-          <div>
-            <p className="text-xs text-text-muted mb-1">Currently</p>
-            <p className="text-text font-medium">
-              {current.position} at {current.company}
-            </p>
+        <div className="space-y-6">
+          <div className="bg-panel border hairline rounded-2xl p-3 shadow-[0_20px_60px_rgba(0,0,0,0.22)]">
+            <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0d1117]">
+              <Image
+                src="/sabyasachi.png"
+                alt="Sabyasachi Sahoo"
+                width={720}
+                height={720}
+                priority
+                className="h-[420px] w-full object-cover sm:h-[460px]"
+              />
+            </div>
           </div>
-          <div>
-            <p className="text-xs text-text-muted mb-1">Based in</p>
-            <p className="text-text font-medium">{personalInfo.location}</p>
-          </div>
-          <div>
-            <p className="text-xs text-text-muted mb-1">Experience</p>
-            <p className="text-text font-medium">11+ years, front-end</p>
-          </div>
-          <div>
-            <p className="text-xs text-text-muted mb-2">Reach me</p>
-            <a
-              href={`mailto:${personalInfo.email}`}
-              className="font-data text-sm text-accent hover:underline break-all"
-            >
-              {personalInfo.email}
-            </a>
+
+          <div className="bg-panel border hairline rounded-lg p-7 space-y-6">
+            <div>
+              <p className="text-xs text-text-muted mb-1">Currently</p>
+              <p className="text-text font-medium">
+                {current.position} at {current.company}
+              </p>
+            </div>
+            <div>
+              <p className="text-xs text-text-muted mb-1">Based in</p>
+              <p className="text-text font-medium">{personalInfo.location}</p>
+            </div>
+            <div>
+              <p className="text-xs text-text-muted mb-1">Experience</p>
+              <p className="text-text font-medium">11+ years, front-end</p>
+            </div>
+            <div>
+              <p className="text-xs text-text-muted mb-2">Reach me</p>
+              <a
+                href={`mailto:${personalInfo.email}`}
+                className="font-data text-sm text-accent hover:underline break-all"
+              >
+                {personalInfo.email}
+              </a>
+            </div>
           </div>
         </div>
       </div>
