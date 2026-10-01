@@ -21,7 +21,7 @@ const plexMono = IBM_Plex_Mono({
   weight: ["400", "500"],
 });
 
-const siteUrl = "https://sabyasachisahoo.dev";
+const siteUrl = "https://sahoo-sabyasachi.vercel.app";
 const title = `${personalInfo.name} — ${personalInfo.title}`;
 const description = personalInfo.summary;
 

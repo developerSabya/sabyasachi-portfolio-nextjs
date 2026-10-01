@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://sabyasachisahoo.dev/sitemap.xml",
+    sitemap: "https://sahoo-sabyasachi.vercel.app/sitemap.xml",
   };
 }
